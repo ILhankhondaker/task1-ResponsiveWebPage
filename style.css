@@ -1,0 +1,175 @@
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*========== Navbar styles  code  start=========*/
+.navbar {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f3f4f6;
+  padding: 15px 20px;
+}
+
+/*--------- logo  ---------*/
+.logo {
+  width: 100%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links li a:hover {
+  color: #00b795;
+}
+
+/********** hamburger for small device *********** */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  margin: 4px;
+}
+/* ==================Navbar code end ================= */
+
+/*########### Hero Section start  ###########*/
+.hero {
+  background: url("https://assets.codepen.io/2585/sean-pollock-PhYq704ffdA-unsplash.jpg")
+    no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  background-color: rgba(25, 19, 19, 0.74);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 24px;
+}
+/*########### Hero Section End  ###########*/
+
+/*************** Cards Section **************/
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 50px;
+}
+
+.card {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 40%;
+  height: auto;
+}
+
+.card h3 {
+  padding: 20px 0 10px;
+  font-size: 24px;
+}
+
+.card p {
+  padding: 0 20px 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+/*************** Cards Section **************/
+
+/*%%%%%%%%%% Footer Start %%%%%%%%%%*/
+footer {
+  font-weight: 700;
+  padding: 10px;
+  background-color: #f3f4f6;
+  text-align: center;
+}
+footer a {
+  color: #00b795;
+}
+/*%%%%%%%%%% Footer End %%%%%%%%%%*/
+
+/*----------------- Responsive Design  Code-----------------*/
+@media (max-width: 1024px) {
+  .cards-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .nav-active {
+    transform: translateX(0);
+  }
+}
