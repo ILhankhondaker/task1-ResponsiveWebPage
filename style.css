@@ -85,6 +85,10 @@ body {
 /*########### Hero Section End  ###########*/
 
 /*************** Cards Section **************/
+.serviceHeading {
+  text-align: center;
+  margin-top: 40px;
+}
 .cards-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -93,27 +97,20 @@ body {
 }
 
 .card {
-  background-color: #f4f4f4;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease;
 }
 
 .card img {
-  width: 40%;
+  width: 50%;
   height: auto;
-}
-
-.card h3 {
-  padding: 20px 0 10px;
-  font-size: 24px;
 }
 
 .card p {
   padding: 0 20px 20px;
-  font-size: 16px;
+  font-size: 24px;
   color: #555;
 }
 
